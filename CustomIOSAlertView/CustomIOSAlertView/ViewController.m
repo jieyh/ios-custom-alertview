@@ -41,9 +41,10 @@
     // Here we need to pass a full frame
     CustomIOSAlertView *alertView = [[CustomIOSAlertView alloc] init];
 
+    [alertView setButtonFont:[UIFont systemFontOfSize:16]];
     // Add some custom content to the alert view
     [alertView setContainerView:[self createDemoView]];
-
+    
     // Modify the parameters
     [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"Close1", @"Close2", @"Close3", nil]];
     [alertView setDelegate:self];

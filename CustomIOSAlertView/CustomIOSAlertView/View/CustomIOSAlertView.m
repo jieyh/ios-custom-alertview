@@ -232,7 +232,7 @@ CGFloat buttonSpacerHeight = 0;
     lineView.backgroundColor = [UIColor colorWithRed:198.0/255.0 green:198.0/255.0 blue:198.0/255.0 alpha:1.0f];
     [dialogContainer addSubview:lineView];
     // ^^^
-
+    
     // Add the custom container if there is any
     [dialogContainer addSubview:containerView];
 
@@ -263,7 +263,9 @@ CGFloat buttonSpacerHeight = 0;
         [closeButton setTitleColor:[UIColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:0.5f] forState:UIControlStateHighlighted];
         [closeButton.titleLabel setFont:[UIFont boldSystemFontOfSize:14.0f]];
         [closeButton.layer setCornerRadius:kCustomIOSAlertViewCornerRadius];
-
+        if(self.buttonFont != nil){
+            [closeButton.titleLabel setFont:self.buttonFont];
+        }
         [container addSubview:closeButton];
     }
 }
